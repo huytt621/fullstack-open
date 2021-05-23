@@ -33,12 +33,22 @@ const App = () => {
       }
       personService
         .create(newPerson)
-      setSuccess(true)
-      setMessage(`Added ${newPerson.name}`)
-      setTimeout(() => {
-        setMessage(null)
-      }, 5000)
-      setPersons(persons.concat(newPerson))
+        .then(returnedPerson => {
+          setSuccess(true)
+          setMessage(`Added ${returnedPerson.name}`)
+          setTimeout(() => {
+            setMessage(null)
+          }, 5000)
+          setPersons(persons.concat(returnedPerson))
+        })
+        .catch(error => {
+          setSuccess(false)
+          setMessage(error.response.data)
+          setTimeout(() => {
+            setMessage(null)
+          }, 5000)
+          setPersons(persons.filter(p => p.name !== newName))
+        })
     }
     setNewName('')
     setNewNumber('')
