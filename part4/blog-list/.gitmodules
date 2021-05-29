@@ -1,0 +1,3 @@
+[submodule "fullstack-open"]
+	path = fullstack-open
+	url = https://github.com/huytt621/fullstack-open

@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.12"
+  },
+  "devDependencies": {
+    "jest": "^27.0.1",
+    "nodemon": "^2.0.7"
+  },
+  "name": "blog-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --verbose",
+    "dev": "nodemon index.js"
+  },
+  "author": "Huy Tran",
+  "license": "ISC",
+  "description": "",
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
