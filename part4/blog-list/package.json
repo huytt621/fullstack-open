@@ -7,16 +7,18 @@
     "mongoose": "^5.12.12"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^27.0.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
   },
   "name": "blog-list",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "jest --verbose",
-    "dev": "nodemon index.js"
+    "start": "cross-env NODE_ENV=production node index.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
+    "dev": "cross-env NODE_ENV=development nodemon index.js"
   },
   "author": "Huy Tran",
   "license": "ISC",
