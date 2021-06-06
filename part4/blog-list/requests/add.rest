@@ -1,8 +1,10 @@
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYwYmJjYmIxZmFlODcyMWNjYjdlOGRmOSIsImlhdCI6MTYyMjkyMjc5MX0.2wAAoPTQb6clnDPbZlOtrbc_FCS7JJd1CJS4BM_Qmmo
 
 {
-  "title": "WORST Blog",
+  "title": "WORST Blog 3: This is Out of Hand",
   "author": "Worst Boi",
-  "url": "http://localhost:3003"
+  "url": "http://localhost:3003",
+  "user": "60bbcbb1fae8721ccb7e8df9"
 }
