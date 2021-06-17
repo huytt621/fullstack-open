@@ -22,4 +22,12 @@ export const clearMessage = () => {
   }
 }
 
+export const setNotification = (content, duration) => {
+  return async dispatch => {
+    dispatch(changeMessage(content))
+    await setTimeout(() => dispatch(clearMessage()), duration * 1000)
+  }
+}
+
+
 export default reducer
